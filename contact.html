@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang='en'><head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Contact – Public College Samana – Official</title>
+<link rel='stylesheet' href='assets/style.css'>
+</head><body>
+<header class='header'><div class='container nav'>
+  <div class='brand'>
+    <div class='logo' aria-hidden='true'>
+      <svg width='26' height='26' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z'/><path d='M9 12l2 2 4-4'/></svg>
+    </div>
+    <h1>Public College Samana</h1>
+    <span class='badge' data-admission-badge>Admissions: …</span>
+  </div>
+  <button class='burger' aria-label='Open menu'>
+    <svg width='26' height='26' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'><path d='M3 6h18M3 12h18M3 18h18'/></svg>
+  </button>
+  <nav class='menu'><div class='links'>
+    <a href='index.html'>Home</a>
+<a href='about.html'>About</a>
+<a href='courses.html'>Courses</a>
+<a href='notices.html'>Notices</a>
+<a href='gallery.html'>Gallery</a>
+<a href='contact.html'>Contact</a>
+  </div></nav>
+</div></header>
+
+<section class='section'><div class='container'>
+  <h3>Contact Us</h3>
+  <div class='card' style='padding:1rem'>
+    <p><strong>Address:</strong> Warraichan Road, near Civil Hospital, Samana – 147101, District Patiala (Punjab)</p>
+    <p><strong>Phone:</strong> 01764‑220093, 01764‑220729, 01764‑501170</p>
+    <p><strong>Email:</strong> pcsamana@yahoo.com</p>
+    <hr style='border-color:#ffffff22'>
+    <form id='enquiry' onsubmit='event.preventDefault(); const d=Object.fromEntries(new FormData(this)); const s=JSON.parse(localStorage.getItem("pcs.enquiries")||"[]"); s.push({...d, time:new Date().toISOString()}); localStorage.setItem("pcs.enquiries", JSON.stringify(s)); this.reset(); alert("Submitted! (saved on this device)");' >
+      <label>Name<br><input required name='name' placeholder='Your name' style='width:100%; padding:.8rem; border-radius:12px; border:1px solid #ffffff25; background:#0b1220; color:var(--text)'></label><br><br>
+      <label>Program<br><select name='program' style='width:100%; padding:.8rem; border-radius:12px; border:1px solid #ffffff25; background:#0b1220; color:var(--text)'>
+        <option>— Select —</option><option>B.A.</option><option>B.Com.</option><option>B.Sc.</option><option>B.C.A.</option><option>M.A.</option><option>M.Sc.</option><option>M.Com.</option><option>PGDCA</option>
+      </select></label><br><br>
+      <label>Phone<br><input required name='phone' placeholder='Mobile no.' pattern='[0-9]{10}' title='Enter 10 digit number' style='width:100%; padding:.8rem; border-radius:12px; border:1px solid #ffffff25; background:#0b1220; color:var(--text)'></label><br><br>
+      <button class='btn primary' type='submit'>Send Enquiry</button>
+      <span class='badge' data-admission-badge style='margin-left:.6rem'>Admissions: …</span>
+      <div class='state-toggle' role='switch' aria-checked='false' tabindex='0' style='margin-left:.6rem; display:inline-flex'>
+        <div class='knob'><div class='opt off'>Closed</div><div class='opt on'>Open</div></div><div class='cursor'></div>
+      </div>
+    </form>
+  </div>
+</div></section>
+
+<footer class='footer'>© <span data-year></span> Public College Samana • All rights reserved.</footer>
+<script src='assets/script.js'></script>
+</body></html>
